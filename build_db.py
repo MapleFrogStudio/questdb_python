@@ -8,8 +8,7 @@ from datetime import datetime
 from questdb.ingress import Sender, IngressError
 
 
-#HOST = 'localhost'
-HOST = '192.168.1.41'
+HOST = 'localhost'
 PORT = 9009
 TABLE_NAME = 'data01'
 

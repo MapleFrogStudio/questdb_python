@@ -20,9 +20,27 @@ Open your browser at
 localhost:9000  
 This will bring up the web console
 ![QuestDB Web Console](https://github.com/MapleFrogStudio/questdb_python/blob/main/images/questdbconsole.png "QuestDB Web Console")  
-  
+
+# Create the target database 
+To store minute price data, we want a structured time series database that will prevent duplicate entries for a datetime+symbol.  
+In the web console, run the following SQL Script
+```
+CREATE TABLE 'minute' (
+  Symbol SYMBOL capacity 256 CACHE,
+  Close DOUBLE,
+  High DOUBLE,
+  Low DOUBLE,
+  Open DOUBLE,
+  Volume LONG,
+  'Adj Close' DOUBLE,
+  Datetime TIMESTAMP
+) timestamp (Datetime) PARTITION BY DAY WAL
+DEDUP UPSERT KEYS(Datetime, Symbol);
+```  
+This will create a table with Open, High, Low, Close, Volume and 'Adj Close' columns. The Datetime column will be the timestamp required by any timeseries database and the symbol will be a special type of column (read the docs on QuestDB for more explanations).
+
 # Install project  
-Project in an IDE (such as VS Code), open a terminal window
+Project in an IDE (such as VS Code), with a terminal window:
 ```
 python -m venv env
 .env\script\activate
@@ -32,6 +50,9 @@ pip install -r requirements.txt
 ```
 python build_db.py
 ```
+
+# Configuration  
+blabla...adjust this section when code is ready...
 
 # Print Screens  
 ![Windows Alert](https://github.com/MapleFrogStudio/questdb_python/blob/main/images/windows01.png "Windows Alert")  
