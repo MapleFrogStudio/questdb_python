@@ -43,7 +43,7 @@ def format_data_for_questdb(data_df):
     data_df['Volume'] = data_df['Volume'].astype(int)   
 
     if 'Symbol' in data_df.columns:
-        data_df = data_df.rename({'Symbol':'Ticker'})
+        data_df = data_df.rename(columns={'Symbol':'Ticker'})
 
     return data_df 
 
@@ -57,6 +57,7 @@ def main():
 def main2():
     """Load price data from github csv files..."""
     raw_urls = [
+        'https://raw.githubusercontent.com/MapleFrogStudio/DATASETS/main/DAILY/TSX-2023-09-21.csv', # Old CSV format, column named Symbol that must be renamed to Ticker
         'https://raw.githubusercontent.com/MapleFrogStudio/DATA-2024-02/main/amex1-2024-02-04.csv',
         'https://raw.githubusercontent.com/MapleFrogStudio/DATA-2024-02/main/amex1-2024-02-05.csv',
         'https://raw.githubusercontent.com/MapleFrogStudio/DATA-2024-02/main/amex1-2024-02-06.csv',
@@ -82,8 +83,9 @@ def main2():
         'https://raw.githubusercontent.com/MapleFrogStudio/DATA-2024-02/main/amex1-2024-02-26.csv',
         'https://raw.githubusercontent.com/MapleFrogStudio/DATA-2024-02/main/amex1-2024-02-27.csv',
         'https://raw.githubusercontent.com/MapleFrogStudio/DATA-2024-02/main/amex1-2024-02-28.csv',
-        'https://raw.githubusercontent.com/MapleFrogStudio/DATA-2024-02/main/amex1-2024-02-29.csv',
+        'https://raw.githubusercontent.com/MapleFrogStudio/DATA-2024-02/main/amex1-2024-02-29.csv'
     ]
+
     for url in raw_urls:
         data_df = pd.read_csv(url)
         data_df = format_data_for_questdb(data_df)     
@@ -93,5 +95,5 @@ def main2():
 
 
 if __name__ == '__main__':
-    #main()
-    main2()
+    main()
+    #main2()
