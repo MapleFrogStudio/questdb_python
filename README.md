@@ -55,7 +55,14 @@ python build_db.py
 ```
 
 # Configuration  
-blabla...adjust this section when code is ready...
+Script build_db.py has two main functions.  
+**main()**  
+Loads a csv file from local data folder and sends it to QuestDB  
+  
+**main2()**  
+raw_url : list of links to online csv files (github for example)  
+loop : iterates through this list to download, structure data and load to questdb  
+***Update this list with your prefered data files***
 
 # Print Screens  
 ![Windows Alert](https://github.com/MapleFrogStudio/questdb_python/blob/main/images/windows01.png "Windows Alert")  
