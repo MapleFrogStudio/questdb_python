@@ -20,13 +20,13 @@ Keep this terminal window opened so the server can be accessed through "localhos
 Open your browser at
 localhost:9000  
 This will bring up the web console
-![QuestDB Web Console](images\questdbconsole.png "QuestDB Web Console")  
+![QuestDB Web Console](https://github.com/MapleFrogStudio/questdb_python/blob/main/images/questdbconsole.png "QuestDB Web Console")  
   
 # Data files  
 All data files will be stored in bin/
 
 # Print Screens  
-![Windows Alert](images\windows01.png "Windows Alert")  
-![Run Anyway](images\windows02.png "Run Anyway")  
-![Allow Java](images\javaallow.png "Allow access")  
-![QuestDB Running](images\serverrunning.png "Allow access")  
+![Windows Alert](https://github.com/MapleFrogStudio/questdb_python/blob/main/images/windows01.png "Windows Alert")  
+![Run Anyway](https://github.com/MapleFrogStudio/questdb_python/blob/main/images/windows02.png "Run Anyway")  
+![Allow Java](https://github.com/MapleFrogStudio/questdb_python/blob/main/images/javaallow.png "Allow access")  
+![QuestDB Running](https://github.com/MapleFrogStudio/questdb_python/blob/main/images/serverrunning.png "Allow access")  
