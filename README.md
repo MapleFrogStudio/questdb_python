@@ -3,7 +3,6 @@
 Example project to load minute price data from github CSV files.  
 
 # Prerequisites  
-
 [Download QuestDB](https://questdb.io/download/) for windows  
 Unzip the files downloaded  
 No installation is required.
@@ -22,8 +21,17 @@ localhost:9000
 This will bring up the web console
 ![QuestDB Web Console](https://github.com/MapleFrogStudio/questdb_python/blob/main/images/questdbconsole.png "QuestDB Web Console")  
   
-# Data files  
-All data files will be stored in bin/
+# Install project  
+Project in an IDE (such as VS Code), open a terminal window
+```
+python -m venv env
+.env\script\activate
+pip install -r requirements.txt  
+```  
+# Running the project  
+```
+python build_db.py
+```
 
 # Print Screens  
 ![Windows Alert](https://github.com/MapleFrogStudio/questdb_python/blob/main/images/windows01.png "Windows Alert")  
