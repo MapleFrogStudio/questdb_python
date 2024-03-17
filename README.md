@@ -42,7 +42,8 @@ DEDUP UPSERT KEYS(Datetime, Symbol);
 This will create a table with Open, High, Low, Close, Volume and 'Adj Close' columns. The Datetime column will be the timestamp required by any timeseries database and the symbol will be a special type of column (read the docs on QuestDB for more explanations).
 
 # Install project  
-Project in an IDE (such as VS Code), with a terminal window:
+Clone thos project to your local machine.  
+Open the project in an IDE (such as VS Code), with a terminal window:
 ```
 python -m venv env
 .env\script\activate
