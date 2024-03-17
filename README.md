@@ -28,7 +28,7 @@ To store minute price data, we want a structured time series database that will 
 In the web console, run the following SQL Script
 ```
 CREATE TABLE 'minute' (
-  Symbol SYMBOL capacity 256 CACHE,
+  Ticker SYMBOL capacity 256 CACHE,
   Close DOUBLE,
   High DOUBLE,
   Low DOUBLE,
@@ -37,7 +37,7 @@ CREATE TABLE 'minute' (
   'Adj Close' DOUBLE,
   Datetime TIMESTAMP
 ) timestamp (Datetime) PARTITION BY DAY WAL
-DEDUP UPSERT KEYS(Datetime, Symbol);
+DEDUP UPSERT KEYS(Datetime, Ticker);
 ```  
 This will create a table with Open, High, Low, Close, Volume and 'Adj Close' columns. The Datetime column will be the timestamp required by any timeseries database and the symbol will be a special type of column (read the docs on QuestDB for more explanations).
 
