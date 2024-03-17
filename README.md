@@ -11,9 +11,11 @@ Note: for simplicity, move the unzipped files to c:\questdb, and create shortcut
   
 # Running the server on local machine
 Run the questdb server by launching: questdb.exe  (or your shortcut).  
-Windows will raise an alert, clock More Info and run anyway.  
-Keep this terminal window opened so the server can be accessed through "localhost:9000"  
-(See bottom of this file for print screens)  
+Windows will raise an alert,  
+Click on the **"More Info"** button,  
+Then click on **"Run anyway"**.  
+Keep this terminal window opened so the server can run in the background at **"localhost:9000"**  
+(See bottom of this file for print screens of windows alert windows)  
 
 # Open the Quest DB Web Console  
 Open your browser at
