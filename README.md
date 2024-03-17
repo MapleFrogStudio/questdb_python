@@ -24,7 +24,7 @@ This will bring up the web console
 ![QuestDB Web Console](https://github.com/MapleFrogStudio/questdb_python/blob/main/images/questdbconsole.png "QuestDB Web Console")  
 
 # Create the target database 
-To store minute price data, we want a structured time series database that will prevent duplicate entries for a datetime+symbol.  
+To store minute price data, we want a structured time series database that will prevent duplicate entries for a datetime+ticker.  
 In the web console, run the following SQL Script
 ```
 CREATE TABLE 'minute' (
@@ -39,7 +39,7 @@ CREATE TABLE 'minute' (
 ) timestamp (Datetime) PARTITION BY DAY WAL
 DEDUP UPSERT KEYS(Datetime, Ticker);
 ```  
-This will create a table with Open, High, Low, Close, Volume and 'Adj Close' columns. The Datetime column will be the timestamp required by any timeseries database and the symbol will be a special type of column (read the docs on QuestDB for more explanations).
+This will create a table with Open, High, Low, Close, Volume and 'Adj Close' columns. The Datetime column will be the timestamp required by any timeseries database and the ticker will be a special type of column to manage our duplicates (read the docs on QuestDB for more explanations).
 
 # Install project  
 Clone thos project to your local machine.  
